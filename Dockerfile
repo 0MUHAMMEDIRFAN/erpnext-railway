@@ -13,7 +13,7 @@ RUN apt-get update \
         nginx supervisor gettext-base util-linux \
     && rm -rf /var/lib/apt/lists/* /etc/nginx/sites-enabled/default \
     && sed -i '/^user /d; /^worker_processes /d' /etc/nginx/nginx.conf \
-    && sed -i '1i user frappe;\nworker_processes 1;' /etc/nginx/nginx.conf
+    && sed -i '1i user frappe root;\nworker_processes 1;' /etc/nginx/nginx.conf
 COPY --from=builder --chown=frappe:0 /home/frappe/frappe-bench /home/frappe/frappe-bench
 COPY versions.json apps.json /opt/erpnext/
 COPY template/*.conf /opt/erpnext/

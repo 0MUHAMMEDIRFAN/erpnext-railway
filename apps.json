@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "hrms",
+      "url": "https://github.com/frappe/hrms",
+      "ref": "v16.60.0",
+      "commit": "1b2d7e034e0de8e30a9e513541d7741710587ad5",
+      "install_on_site": true
+    }
+  ]
+}

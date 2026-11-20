@@ -1,0 +1,17 @@
+{
+  "frappe": {
+    "repository": "https://github.com/frappe/frappe",
+    "ref": "v16.60.2",
+    "commit": "2df0425571ebbaed878eabc3edc5b7e7c3327ae0"
+  },
+  "erpnext": {
+    "repository": "https://github.com/frappe/erpnext",
+    "ref": "v16.60.0",
+    "commit": "886ab6ae187244e7f1b852393384ab6019d56264"
+  },
+  "hrms": {
+    "repository": "https://github.com/frappe/hrms",
+    "ref": "v16.60.0",
+    "commit": "1b2d7e034e0de8e30a9e513541d7741710587ad5"
+  }
+}

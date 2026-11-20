@@ -1,0 +1,8 @@
+**
+!Dockerfile
+!apps.json
+!versions.json
+!script/
+!script/*.sh
+!template/
+!template/*.conf

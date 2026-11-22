@@ -1,3 +1,4 @@
+
 {
   "apps": [
     {
@@ -5,6 +6,13 @@
       "url": "https://github.com/frappe/hrms",
       "ref": "v16.60.0",
       "commit": "1b2d7e034e0de8e30a9e513541d7741710587ad5",
+      "install_on_site": true
+    },
+    {
+      "name": "zerochat",
+      "url": "https://github.com/0MUHAMMEDIRFAN/frappe_zerochat",
+      "ref": "main",
+      "commit": "65786d77c68cb7c1b6acb62a591fc3159019bbdd",
       "install_on_site": true
     }
   ]

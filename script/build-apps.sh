@@ -38,12 +38,16 @@ if [[ -s /run/secrets/app_git_token ]]; then
 fi
 
 verify_commit() {
-    local name=$1 expected=$2
+    local name=$1 expected=$2 actual
 
-    [[ "$(git -C "apps/$name" rev-parse HEAD)" == "$expected" ]] || {
+    actual=$(git -C "apps/$name" rev-parse HEAD)
+
+    if [[ "$actual" != "$expected" ]]; then
         echo "Commit mismatch for $name" >&2
+        echo "Expected: $expected" >&2
+        echo "Actual:   $actual" >&2
         exit 1
-    }
+    fi
 }
 
 bench init --frappe-path "$(jq -r .frappe.repository "$versions")" \

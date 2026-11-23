@@ -38,6 +38,8 @@ jobs:
           cache-to: type=gha,scope=erpnext-amd64,mode=min
           secrets: |
             app_git_token=${{ secrets.APP_GIT_TOKEN }}
+          build-args: |
+            APP_BUILD_CACHE_BUST=${{ github.run_id }}-${{ github.run_attempt }}
       - name: Test fresh install and restart
         env:
           IMAGE: ${{ steps.image.outputs.name }}:sha-${{ github.sha }}

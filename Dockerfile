@@ -4,8 +4,12 @@ USER frappe
 WORKDIR /home/frappe
 COPY versions.json apps.json /opt/erpnext/
 COPY --chmod=0755 script/build-apps.sh /usr/local/bin/
-RUN --mount=type=secret,id=app_git_token,uid=1000,mode=0400 build-apps.sh
 
+ARG APP_BUILD_CACHE_BUST=1
+
+RUN --mount=type=secret,id=app_git_token,uid=1000,mode=0400 \
+    build-apps.sh
+    
 FROM frappe/base:version-16@sha256:519d88a206f6d873be36b0cea28f5807461613156e1921b17bd4367cf31f2a44
 USER root
 RUN apt-get update \

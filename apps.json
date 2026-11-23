@@ -12,7 +12,6 @@
       "name": "zerochat",
       "url": "https://github.com/0MUHAMMEDIRFAN/frappe_zerochat",
       "ref": "main",
-      "commit": "65786d77c68cb7c1b6acb62a591fc3159019bbdd",
       "install_on_site": true
     }
   ]
